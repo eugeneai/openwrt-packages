@@ -22,8 +22,8 @@ src-git https://github.com/eugeneai/openwrt-packages.git
 ```
 then if a build SDK is used 
 ```
-./scripts/feeds update packages
-./scripts/feeds install frr libyang libjson-c libcap
+./scripts/feeds update -a 
+./scripts/feeds install frr
 make
 ```
 
