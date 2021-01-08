@@ -16,6 +16,19 @@ This feed is enabled by default. To install all its package definitions, run:
 ./scripts/feeds install -a -p packages
 ```
 
+In order to use this package feed one must edit `feeds.conf.default` and replace `packages' line with
+```
+src-git https://github.com/eugeneai/openwrt-packages
+```
+then if a build SDK is used 
+```
+./scripts/feeds update packages
+./scripts/feeds install frr libyang libjson-c libcap
+make
+```
+
+The build will fail as base-dir is not built and cryptography keys were not issued.  Copy built modules `from bin/.../packages` to `packages` directory of Image Builder.
+
 ## License
 
 See [LICENSE](LICENSE) file.
