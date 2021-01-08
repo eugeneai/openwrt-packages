@@ -16,9 +16,9 @@ This feed is enabled by default. To install all its package definitions, run:
 ./scripts/feeds install -a -p packages
 ```
 
-In order to use this package feed one must edit `feeds.conf.default` and replace `packages' line with
+In order to use this package feed one must edit `feeds.conf.default` and replace line of "packages" repo with
 ```
-src-git https://github.com/eugeneai/openwrt-packages
+src-git https://github.com/eugeneai/openwrt-packages.git
 ```
 then if a build SDK is used 
 ```
